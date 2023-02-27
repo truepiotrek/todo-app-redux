@@ -12,10 +12,16 @@ const App: FC = () => {
     setTodos(prevTodos => [...prevTodos, {id: Math.random().toString(), text: text}])
   }
 
+  const todoDeleteHandler = (todoId: string) => {
+    setTodos(prevTodos => {
+      return prevTodos.filter(todo => todo.id !== todoId)
+    })
+  }
+
   return (
     <div className="App">
       <NewTodo onAddTodo={todoHandler} />
-      <TodoList items={todos} />
+      <TodoList onTodoDelete={todoDeleteHandler} items={todos} />
     </div>
   );
 }
