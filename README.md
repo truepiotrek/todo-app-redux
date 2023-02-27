@@ -8,5 +8,4 @@ To run this app simply `git clone` it to your local drive, run `npm i` from the 
 
 # Current version info
 
-For not it used prop drilling and np Redux has been implemented as of 26th of Feb 2023.
-It has been requested to add redux support and this will be done in the nearest spring.
+This app has a very simple version of redux implemented. It counts number of todos added or removed.
